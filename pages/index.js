@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Transition } from "@headlessui/react";
 import styles from '../styles/Home.module.css';
+import Head from 'next/head';
 
 const colorPallettes = [
   [
@@ -102,6 +103,18 @@ const Index = () => {
   }, [query]);
 
   return (
+    <>
+    <Head>
+      <title>TCD Tags</title>
+      <meta description="Search TCD tags" />
+      <meta property="og:title" content="TCD Tags" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://tcd-tags.netlify.app" />
+      <meta property="og:image" content="https://cdn.discordapp.com/attachments/760031614389452841/943244484437770321/tcdlogo.png" />
+      <meta property="og:description" content="Search TCD tags" />
+      <meta property="og:site_name" content="TCD Tags" />
+      <meta name="theme-color" content="#ff006a" />
+    </Head>
     <div
       style={
         animation
@@ -172,6 +185,7 @@ const Index = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
