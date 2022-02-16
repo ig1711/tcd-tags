@@ -2,20 +2,59 @@ import { useEffect, useState } from 'react';
 import ColorPalletteContext from '../contexts/colorPallette';
 import AnimationContext from '../contexts/animation';
 
+// const colorPallettes = [
+//   ['emerald', 'teal', '209,250,229'],
+//   ['cyan', 'sky', '207,250,254'],
+//   ['pink', 'rose', '252,231,243'],
+//   ['lime', 'green', '236,252,203'],
+// ].map(m => [
+//   `text-${m[0]}-100`,
+//   `from-${m[1]}-900`,
+//   `to-${m[0]}-100`,
+//   `shadow-[0_0_0_1px_rgb(${m[2]})_inset]`,
+//   `rgb(${m[2]})`,
+//   `bg-${m[0]}-100`,
+//   `text-${m[1]}-900`,
+// ]);
+
 const colorPallettes = [
-  ['emerald', 'teal', '209,250,229'],
-  ['cyan', 'sky', '207,250,254'],
-  ['pink', 'rose', '252,231,243'],
-  ['lime', 'green', '236,252,203'],
-].map(m => [
-  `text-${m[0]}-100`,
-  `from-${m[1]}-900`,
-  `to-${m[0]}-100`,
-  `shadow-[0_0_0_1px_rgb(${m[2]})_inset]`,
-  `rgb(${m[2]})`,
-  `bg-${m[0]}-100`,
-  `text-${m[1]}-900`,
-]);
+  [
+    'text-emerald-100',
+    'from-teal-900',
+    'to-emerald-100',
+    'shadow-[0_0_0_1px_rgb(209,250,229)_inset]',
+    'rgb(209,250,229)',
+    'bg-emerald-100',
+    'text-teal-900',
+  ],
+  [
+    'text-cyan-100',
+    'from-sky-900',
+    'to-cyan-100',
+    'shadow-[0_0_0_1px_rgb(207,250,254)_inset]',
+    'rgb(207,250,254)',
+    'bg-cyan-100',
+    'text-sky-900',
+  ],
+  [
+    'text-pink-100',
+    'from-rose-900',
+    'to-pink-100',
+    'shadow-[0_0_0_1px_rgb(252,231,243)_inset]',
+    'rgb(252,231,243)',
+    'bg-pink-100',
+    'text-rose-900',
+  ],
+  [
+    'text-lime-100',
+    'from-green-900',
+    'to-lime-100',
+    'shadow-[0_0_0_1px_rgb(236,252,203)_inset]',
+    'rgb(236,252,203)',
+    'bg-lime-100',
+    'text-green-900',
+  ],
+];
 
 const Layout = ({ children }) => {
   const [colorPallette, setColorPallette] = useState(colorPallettes[0]);
