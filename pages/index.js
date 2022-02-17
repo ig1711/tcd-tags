@@ -127,7 +127,7 @@ const Index = () => {
 
         <div
           style={{ scrollbarWidth: 'none' }}
-          className={`${styles.scroll} w-[26rem] md:w-[32rem] max-h-96 overflow-y-scroll grid grid-columns-1 content-start gap-2`}
+          className={`${styles.scroll} focus:outline-none w-[26rem] md:w-[32rem] max-h-96 overflow-y-scroll grid grid-columns-1 content-start gap-2`}
         >
           {up && !results.length ? (
             <ListItem
@@ -168,7 +168,7 @@ const ListItem = ({ arr, show, current, word, x }) => {
     >
       <Link href={`/${word}`}>
         <a
-          className={`text-[2rem] font-fira ${current[6]} ${current[5]} rounded-md py-2 px-4 flex focus:bg-white`}
+          className={`text-[2rem] font-fira ${current[6]} ${current[5]} rounded-md py-2 px-4 flex focus:bg-white focus:outline-none`}
         >
           <label className="grid grid-columns-1 place-items-center">
             {x ? (
