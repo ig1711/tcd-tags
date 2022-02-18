@@ -31,11 +31,13 @@ const Loading = () => <div className="text-[100px]">Loading...</div>;
 
 const ValidTag = ({ tag }) => (
   <div className="grid grid-cols-1 gap-4">
-    <span className="text-[100px] underline text-black/40">{tag}</span>
-    <span className="text-[50px] text-black/70">
+    <span className="text-[100px] font-bold underline text-black/40">
+      {tag}
+    </span>
+    <span className="text-[50px] text-black/50">
       Sorry, details are not available
     </span>
-    <span className="text-[30px] text-black/70">
+    <span className="text-[30px]">
       <a
         className="bg-black/10 py-2 px-4 rounded hover:bg-black/50 transition-all hover:text-white text-white/80 flex"
         href="https://github.com/ig1711/tags-grep"
