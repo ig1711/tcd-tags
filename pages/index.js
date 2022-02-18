@@ -89,7 +89,7 @@ const Index = () => {
       </Head>
       <div
         className={`${
-          up ? 'translate-y-20' : 'translate-y-60'
+          up ? 'translate-y-[10vh]' : 'translate-y-[40vh]'
         } grid grid-columns-1 gap-2 transition-all duration-700 ease-in-out`}
       >
         <form
@@ -127,7 +127,7 @@ const Index = () => {
 
         <div
           style={{ scrollbarWidth: 'none' }}
-          className={`${styles.scroll} focus:outline-none w-[26rem] md:w-[32rem] max-h-96 overflow-y-scroll grid grid-columns-1 content-start gap-2`}
+          className={`${styles.scroll} focus:outline-none w-[26rem] md:w-[32rem] max-h-[60vh] overflow-y-scroll grid grid-columns-1 content-start gap-2`}
         >
           {up && !results.length ? (
             <ListItem
