@@ -20,19 +20,23 @@ const Index = () => {
   const [results, setResults] = useState([]);
   const [up, setUp] = useState(false);
   const inputRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Auto focus
   useEffect(() => {
     inputRef?.current?.focus();
   }, []);
 
+  useEffect(() => setIsMobile(window.innerWidth < 768), []);
+
   // Debounce
   useEffect(() => {
-    const timer = setTimeout(() => setQuery(value), 100);
+    // More debounce for phones
+    const timer = setTimeout(() => setQuery(value), isMobile ? 500 : 100);
     return () => {
       clearTimeout(timer);
     };
-  }, [value]);
+  }, [value, isMobile]);
 
   // Wait in resetting search bar's position
   useEffect(() => {
