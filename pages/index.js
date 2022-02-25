@@ -24,7 +24,8 @@ const Index = () => {
 
   // Auto focus
   useEffect(() => {
-    inputRef?.current?.focus();
+    if(inputRef?.current)
+      inputRef.current.focus();
   }, []);
 
   useEffect(() => setIsMobile(window.innerWidth < 768), []);
@@ -206,6 +207,8 @@ const InnerListItemContent = forwardRef(({ href, onClick, arr, current, x }, ref
     </a>
   )
 })
+
+InnerListItemContent.displayName = 'InnerListItemContent';
 
 const ListItem = ({ arr, show, current, word, x }) => {
   return (
